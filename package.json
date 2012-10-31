@@ -1,0 +1,35 @@
+{
+  "name": "seneca-sqlite",
+  "version": "0.0.1",
+  "description": "SQLite database layer for Seneca framework",
+  "main": "lib/sqlite-store.js",
+  "scripts": {
+    "test": "expresso test/sqlite.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bamse16/seneca-sqlite.git"
+  },
+  "keywords": [
+    "seneca",
+    "sqlite",
+    "plugin"
+  ],
+  "author": "Marius Ursache",
+  "license": "BSD",
+
+  "dependencies": {
+    "seneca":         ">=0.4.1",
+    "sqlite3":        ">=2.1.5",
+    "underscore":     "1.1.x",
+    "node-uuid":      "*"
+  },
+
+  "devDependencies": {
+    "expresso":"*",
+    "vows":"*",
+    "async":"*",
+    "eyes":"*",
+    "gex":"*"
+  }
+}
