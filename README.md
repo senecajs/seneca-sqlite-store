@@ -14,7 +14,10 @@ Usage:
 
     var si = seneca(senecaConfig);
     si.use(senecaSQLiteStore, senecaSQLiteStoreOpts);
-
+    si.ready( function(){
+        var product = si.make('product');
+        ...
+    });
     ...
 
 [Seneca]: http://senecajs.org/
