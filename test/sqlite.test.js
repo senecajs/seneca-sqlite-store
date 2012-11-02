@@ -1,8 +1,5 @@
 /* Copyright (c) 2012 Marius Ursache */
 
-var common_tests = require('seneca/test/common.test');
-var common   = require('seneca/lib/common');
-
 var seneca   = require('seneca');
 var shared   = require('seneca/test/store/shared');
 
@@ -31,7 +28,7 @@ var config = {
 
 var si = seneca(config);
 
-var senecaSQLiteStore = require('../lib/sqlite-store');
+var senecaSQLiteStore = require('seneca-sqlite');
 var senecaSQLiteStoreOpts = { database:'/tmp/senecatest.db'};
 
 si.use(senecaSQLiteStore, senecaSQLiteStoreOpts);
