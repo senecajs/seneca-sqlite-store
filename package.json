@@ -1,5 +1,5 @@
 {
-  "name": "seneca-sqlite",
+  "name": "seneca-sqlite-store",
   "version": "0.0.1",
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bamse16/seneca-sqlite.git"
+    "url": "git://github.com/bamse16/seneca-sqlite-store.git"
   },
   "keywords": [
     "seneca",
