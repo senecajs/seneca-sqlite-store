@@ -1,6 +1,6 @@
 {
   "name": "seneca-sqlite-store",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "keywords": [
     "seneca",
     "sqlite",
+    "store",
     "plugin"
   ],
   "author": "Marius Ursache",
@@ -26,10 +27,14 @@
   },
 
   "devDependencies": {
-    "expresso":"*",
     "vows":"*",
     "async":"*",
     "eyes":"*",
     "gex":"*"
-  }
+  },
+  "files":[
+    "README.md",
+    "LICENSE.txt",
+    "lib/sqlite-store.js"
+  ]
 }
