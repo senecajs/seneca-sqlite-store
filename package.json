@@ -4,7 +4,7 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "expresso test/sqlite.test.js"
+    "test": "./node_modules/mocha/bin/mocha test/sqlite.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,18 +20,20 @@
   "license": "BSD",
 
   "dependencies": {
-    "seneca":         ">=0.4.1",
-    "sqlite3":        ">=2.1.5",
-    "underscore":     "1.1.x",
-    "node-uuid":      "*"
+    "seneca":     ">=0.4.1",
+    "sqlite3":    ">=2.1.5",
+    "underscore": "1.1.x",
+    "node-uuid":  "*"
   },
 
   "devDependencies": {
-    "vows":"*",
-    "async":"*",
-    "eyes":"*",
-    "gex":"*"
+    "mocha":  "*",
+    "vows":   "*",
+    "async":  "*",
+    "eyes":   "*",
+    "gex":    "*"
   },
+
   "files":[
     "README.md",
     "LICENSE.txt",

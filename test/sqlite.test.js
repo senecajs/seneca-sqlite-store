@@ -1,7 +1,10 @@
 /* Copyright (c) 2012 Marius Ursache */
 
-var seneca   = require('seneca');
-var shared   = require('seneca/test/store/shared');
+"use strict";
+
+var assert = require('assert');
+var seneca = require('seneca');
+var shared = seneca.test.store.shared;
 
 //These tests assume a MySQL database/structure is already created.
 /*
@@ -28,7 +31,7 @@ var config = {
 
 var si = seneca(config);
 
-var senecaSQLiteStore = require('seneca-sqlite');
+var senecaSQLiteStore = require('..');
 var senecaSQLiteStoreOpts = { database:'/tmp/senecatest.db'};
 
 si.use(senecaSQLiteStore, senecaSQLiteStoreOpts);
@@ -36,6 +39,7 @@ si.use(senecaSQLiteStore, senecaSQLiteStoreOpts);
 si.__testcount = 0;
 var testcount = 0;
 
+/*
 module.exports = {
   basictest: (testcount++, shared.basictest(si)),
   extratest: (testcount++, extratest(si)),
@@ -45,4 +49,30 @@ module.exports = {
 function extratest(si) {
   console.log('EXTRA')
   si.__testcount++
+}
+*/
+
+
+describe('sqlite', function(){
+  it('basic', function(done){
+    testcount++
+    shared.basictest(si,done)
+  })
+
+
+  it('extra', function(done){
+    testcount++
+    extratest(si,done)
+  })
+
+
+  it('close', function(done){
+    shared.closetest(si,testcount,done)
+  })
+})
+
+function extratest(si,done) {
+  console.log('EXTRA')
+  si.__testcount++
+  return done();
 }
