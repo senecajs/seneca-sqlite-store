@@ -2,7 +2,6 @@
 
 "use strict";
 
-var assert = require('assert');
 var seneca = require('seneca');
 var shared = seneca.test.store.shared;
 
@@ -39,40 +38,24 @@ si.use(senecaSQLiteStore, senecaSQLiteStoreOpts);
 si.__testcount = 0;
 var testcount = 0;
 
-/*
-module.exports = {
-  basictest: (testcount++, shared.basictest(si)),
-  extratest: (testcount++, extratest(si)),
-  closetest: shared.closetest(si,testcount)
-};
-
-function extratest(si) {
-  console.log('EXTRA')
-  si.__testcount++
-}
-*/
-
-
 describe('sqlite', function(){
   it('basic', function(done){
-    testcount++
-    shared.basictest(si,done)
-  })
-
+    testcount++;
+    shared.basictest(si,done);
+  });
 
   it('extra', function(done){
-    testcount++
-    extratest(si,done)
-  })
-
+    testcount++;
+    extratest(si,done);
+  });
 
   it('close', function(done){
-    shared.closetest(si,testcount,done)
-  })
-})
+    shared.closetest(si,testcount,done);
+  });
+});
 
 function extratest(si,done) {
-  console.log('EXTRA')
-  si.__testcount++
+  console.log('EXTRA');
+  si.__testcount++;
   return done();
 }
