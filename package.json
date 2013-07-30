@@ -1,6 +1,6 @@
 {
   "name": "seneca-sqlite-store",
-  "version": "0.0.2",
+  "version": "0.0.3
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
@@ -17,10 +17,11 @@
     "plugin"
   ],
   "author": "Marius Ursache",
+  "contributors": ["Peter Elger <elger.peter@gmail.com> (http://peterelger.com/)"],
   "license": "BSD",
 
   "dependencies": {
-    "seneca":     ">=0.5.8",
+    "seneca":     ">=0.5.9",
     "sqlite3":    ">=2.1.5",
     "underscore": "1.1.x",
     "node-uuid":  "*"
