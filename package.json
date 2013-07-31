@@ -1,6 +1,6 @@
 {
   "name": "seneca-sqlite-store",
-  "version": "0.0.3
+  "version": "0.0.3",
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
