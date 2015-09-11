@@ -7,13 +7,13 @@
 var seneca = require('seneca');
 var lab = exports.lab = require('lab').script();
 var shared = require('seneca-store-test');
-
+var path    =  require('path');
 var senecaSQLiteStore = require('..');
 var describe = lab.describe;
 var it = lab.it;
-var si = seneca({log:'silent'});
+var si = seneca(/*{log:'silent'}*/);
 
-si.use(senecaSQLiteStore, { database:'./db/senecatest.db'});
+si.use(senecaSQLiteStore, {database:path.join(__dirname, '/db/senecatest.db')});
 
 si.__testcount = 0;
 var testcount = 0;
