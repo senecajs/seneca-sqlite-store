@@ -35,7 +35,7 @@
 
   "devDependencies": {
     "lab": "^8.2.x",
-    "seneca": "^1.1.x",
+    "seneca": "plugin",
     "seneca-store-test": "^1.0.x",
     "eslint-config-seneca": "1.x.x",
     "eslint-plugin-standard": "1.x.x",
