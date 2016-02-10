@@ -25,6 +25,7 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/senecajs/seneca-sqlite-store",
+  "bugs": "https://github.com/senecajs/seneca-sqlite-store/issues",
   "dependencies": {
     "sqlite3":    ">=2.1.5",
     "node-uuid":  "*",

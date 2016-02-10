@@ -1,5 +1,3 @@
-/* jslint node: true */
-/* Copyright (c) 2012 Marius Ursache */
 
 'use strict'
 
