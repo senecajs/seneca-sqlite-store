@@ -1,41 +1,38 @@
-/*jslint node: true */
-/*global describe:true, it:true */
+/* jslint node: true */
 /* Copyright (c) 2012 Marius Ursache */
 
-"use strict";
+'use strict'
 
-var seneca = require('seneca');
-var lab = exports.lab = require('lab').script();
-var shared = require('seneca-store-test');
+var Seneca = require('seneca')
+var lab = exports.lab = require('lab').script()
+var Shared = require('seneca-store-test')
+var SenecaSQLiteStore = require('..')
+var describe = lab.describe
+var it = lab.it
+var si = Seneca(/* {log:'silent'}*/)
+si.use(SenecaSQLiteStore, {database: './test/db/senecatest.db'})
 
-var senecaSQLiteStore = require('..');
-var describe = lab.describe;
-var it = lab.it;
-var si = seneca(/*{log:'silent'}*/);
+si.__testcount = 0
+var testcount = 0
 
-si.use(senecaSQLiteStore, {database:'./test/db/senecatest.db'});
+describe('sqlite', function () {
+  it('basic', function (done) {
+    testcount++
+    Shared.basictest(si, done)
+  })
 
-si.__testcount = 0;
-var testcount = 0;
+  it('extra', function (done) {
+    testcount++
+    extratest(si, done)
+  })
 
-describe('sqlite', function(){
-  it('basic', function(done){
-    testcount++;
-    shared.basictest(si, done);
-  });
+  it('close', function (done) {
+    Shared.closetest(si, testcount, done)
+  })
+})
 
-  it('extra', function(done){
-    testcount++;
-    extratest(si,done);
-  });
-
-  it('close', function(done){
-    shared.closetest(si,testcount,done);
-  });
-});
-
-function extratest(si,done) {
-  console.log('EXTRA');
-  si.__testcount++;
-  return done();
+function extratest (si, done) {
+  console.log('EXTRA')
+  si.__testcount++
+  return done()
 }
