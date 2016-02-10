@@ -5,11 +5,15 @@
 "use strict";
 
 var seneca = require('seneca');
-var shared = seneca.test.store.shared;
-var senecaSQLiteStore = require('..');
-var si = seneca();
+var lab = exports.lab = require('lab').script();
+var shared = require('seneca-store-test');
 
-si.use(senecaSQLiteStore, { database:'./db/senecatest.db'});
+var senecaSQLiteStore = require('..');
+var describe = lab.describe;
+var it = lab.it;
+var si = seneca(/*{log:'silent'}*/);
+
+si.use(senecaSQLiteStore, {database:'./test/db/senecatest.db'});
 
 si.__testcount = 0;
 var testcount = 0;
