@@ -4,11 +4,12 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "lab test/*.test.js -r console -v"
+    "test": "lab test/*.test.js -r console -v",
+    "lint": "lab -dL"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bamse16/seneca-sqlite-store.git"
+    "url": "git://github.com/senecajs/seneca-sqlite-store.git"
   },
   "keywords": [
     "seneca",
@@ -19,21 +20,26 @@
   "author": "Marius Ursache",
   "contributors": [
     "Peter Elger <elger.peter@gmail.com> (http://peterelger.com/)",
-    "Vito Tardia (http://vito.tardia.me)"
+    "Vito Tardia (http://vito.tardia.me)",
+    "Matthew O'Connor (https://github.com/matthewoconnor-development)"
   ],
-  "license": "BSD",
-
+  "license": "MIT",
+  "homepage": "https://github.com/senecajs/seneca-sqlite-store",
+  "bugs": "https://github.com/senecajs/seneca-sqlite-store/issues",
   "dependencies": {
     "sqlite3":    ">=2.1.5",
     "node-uuid":  "*",
     "eraro": "^0.4.1",
-    "lodash": "^3.10.1"
+    "lodash": "^4.3.0"
   },
 
   "devDependencies": {
-    "lab": "^5.16.0",
-    "seneca": "^0.6.5",
-    "seneca-store-test": "^0.2.2"
+    "lab": "^8.2.x",
+    "seneca": "plugin",
+    "seneca-store-test": "^1.0.x",
+    "eslint-config-seneca": "1.x.x",
+    "eslint-plugin-standard": "1.x.x",
+    "eslint-plugin-hapi": "4.x.x"
   },
 
   "files":[
