@@ -4,7 +4,7 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "lab test/*.test.js -r console -v -t 80",
+    "test": "lab test/*.test.js -r console -v -t 87",
     "lint": "lab -dL"
   },
   "repository": {

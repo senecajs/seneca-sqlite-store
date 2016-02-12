@@ -9,7 +9,6 @@ var describe = lab.describe
 var si = Seneca(/* {log:'silent'}*/)
 si.use(SenecaSQLiteStore, {database: './test/db/senecatest.db'})
 
-si.__testcount = 0
 
 describe('sqlite', function () {
   Shared.basictest({
