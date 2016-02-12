@@ -1,5 +1,6 @@
 lib-cov
 *.log
+*.db
 
 node_modules
 .idea
