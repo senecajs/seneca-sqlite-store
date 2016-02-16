@@ -15,5 +15,14 @@ describe('sqlite', function () {
     seneca: si,
     script: lab
   })
-})
 
+  Shared.sorttest({
+    seneca: si,
+    script: lab
+  })
+
+  Shared.limitstest({
+    seneca: si,
+    script: lab
+  })
+})
