@@ -1,9 +1,20 @@
 language: node_js
 sudo: false
 
+env:
+  - SENECA_VER=@1.x.x
+  - SENECA_VER=@2.x.x
+
 node_js:
- - '5'
- - '4'
+  - '0.10'
+  - '0.12'
+  - '4'
+  - '5'
+  - '6'
+  
+before_script:
+  - npm install seneca$SENECA_VER
+
 
 cache:
  directories:
