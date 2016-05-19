@@ -19,5 +19,8 @@ before_script:
 
 
 cache:
- directories:
- - node_modules
+  directories:
+    - node_modules
+ 
+after_script:
+  - npm run coverage

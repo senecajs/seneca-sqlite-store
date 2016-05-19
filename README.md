@@ -5,6 +5,7 @@
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
 [![Dependency Status][david-badge]][david-url]
+[![Coveralls][BadgeCoveralls]][Coveralls]
 [![Gitter chat][gitter-badge]][gitter-url]
 
 ## Description
@@ -71,3 +72,5 @@ Licensed under [MIT][].
 [travis-url]: https://travis-ci.org/senecajs/seneca-sqlite-store
 [MIT]: ./LICENSE.txt
 [Senecajs org]: https://github.com/senecajs/
+[Coveralls]: https://coveralls.io/github/senecajs/seneca-sqlite-store?branch=master
+[BadgeCoveralls]: https://coveralls.io/repos/github/senecajs/seneca-sqlite-store/badge.svg?branch=master
