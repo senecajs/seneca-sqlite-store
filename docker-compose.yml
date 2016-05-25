@@ -1,0 +1,4 @@
+sqlite:
+    build: ./
+    ports:
+    - "12345:12345"

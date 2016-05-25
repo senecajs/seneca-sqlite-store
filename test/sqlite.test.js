@@ -8,7 +8,7 @@ var SenecaSQLiteStore = require('..')
 var describe = lab.describe
 var si = Seneca(/* {log:'silent'}*/)
 var before = lab.before
-si.use(SenecaSQLiteStore, {database: './test/db/senecatest.db'})
+si.use(SenecaSQLiteStore, {database: './db/senecatest.db'})
 
 if (si.version >= '2.0.0') {
   si.use('entity')
