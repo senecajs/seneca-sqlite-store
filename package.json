@@ -4,8 +4,8 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "lab test/*.test.js -r console -v -t 87",
-    "lint": "lab -dL"
+    "test": "./node_modules/@hapi/lab/bin/lab test/*.test.js -r console -v -t 87",
+    "lint": "./node_modules/@hapi/lab/bin/lab -dL"
   },
   "repository": {
     "type": "git",
@@ -27,21 +27,20 @@
   "homepage": "https://github.com/senecajs-labs/seneca-sqlite-store",
   "bugs": "https://github.com/senecajs-labs/seneca-sqlite-store/issues",
   "dependencies": {
-    "sqlite3":    ">=2.1.5",
-    "node-uuid":  "*",
     "eraro": "^0.4.1",
-    "lodash": "^4.3.0"
+    "lodash": "^4.3.0",
+    "node-uuid": "*",
+    "sqlite3": ">=2.1.5"
   },
   "devDependencies": {
-    "lab": "8.2.x",
-    "seneca": "plugin",
-    "seneca-store-test": "^1.0.0",
+    "@hapi/lab": "24.2.0",
     "eslint-config-seneca": "1.x.x",
+    "eslint-plugin-hapi": "4.x.x",
     "eslint-plugin-standard": "1.x.x",
-    "eslint-plugin-hapi": "4.x.x"
+    "seneca": "plugin",
+    "seneca-store-test": "^1.0.0"
   },
-
-  "files":[
+  "files": [
     "README.md",
     "LICENSE.txt",
     "lib/sqlite-store.js"

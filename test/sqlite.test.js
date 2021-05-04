@@ -2,7 +2,7 @@
 'use strict'
 
 var Seneca = require('seneca')
-var lab = exports.lab = require('lab').script()
+var lab = exports.lab = require('@hapi/lab').script()
 var Shared = require('seneca-store-test')
 var SenecaSQLiteStore = require('..')
 var describe = lab.describe
