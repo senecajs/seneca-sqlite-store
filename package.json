@@ -5,6 +5,7 @@
   "main": "lib/sqlite-store.js",
   "scripts": {
     "test": "./node_modules/@hapi/lab/bin/lab test/*.test.js -r console -v -t 87",
+    "test-some": "./node_modules/@hapi/lab/bin/lab test/*.test.js -r console -v -g ",
     "lint": "./node_modules/@hapi/lab/bin/lab -dL"
   },
   "repository": {
