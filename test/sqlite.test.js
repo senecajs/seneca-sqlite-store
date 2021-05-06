@@ -7,32 +7,52 @@ var { describe, before } = lab
 var Shared = require('seneca-store-test')
 var SenecaSQLiteStore = require('..')
 
+function makeSenecaForTest(opts = {}) {
+  const seneca = Seneca(/* {log:'silent'}*/)
+
+  seneca.use('entity')
+
+
+  const { sqlite_store_opts = {} } = opts
+
+  console.log(sqlite_store_opts) // dbg
+
+  seneca.use(SenecaSQLiteStore, {
+    database: './test/db/senecatest.db',
+    ...sqlite_store_opts
+  })
+
+
+  return seneca
+}
+
 describe('sqlite', function () {
-  var si = Seneca(/* {log:'silent'}*/)
-  si.use('entity')
-  si.use(SenecaSQLiteStore, {database: './test/db/senecatest.db'})
+  const seneca = makeSenecaForTest()
 
   before(() => new Promise((resolve, _reject) => {
-    si.ready(resolve)
+    seneca.ready(resolve)
   }))
 
   describe('basic tests', () => {
     Shared.basictest({
-      seneca: si,
-      script: lab
+      seneca,
+      script: lab,
+      senecaMerge: makeSenecaForTest({
+        sqlite_store_opts: { merge: false }
+      })
     })
   })
 
   describe('sort tests', () => {
     Shared.sorttest({
-      seneca: si,
+      seneca,
       script: lab
     })
   })
 
   describe('limits tests', () => {
     Shared.limitstest({
-      seneca: si,
+      seneca,
       script: lab
     })
   })
