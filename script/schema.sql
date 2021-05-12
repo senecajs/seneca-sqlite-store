@@ -24,18 +24,52 @@ CREATE TABLE moon_bar (
   seneca VARCHAR(125)
 );
 
-CREATE TABLE products (
-  id VARCHAR(36),
-  label VARCHAR(255),
-  price DECIMAL(11, 2)
+CREATE TABLE players (
+  id VARCHAR(36) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  points INT DEFAULT NULL,
+
+  PRIMARY KEY (id),
+  UNIQUE(username)
+);
+
+CREATE TABLE racers (
+  id VARCHAR(36) NOT NULL,
+  points INT NOT NULL DEFAULT 0,
+  username VARCHAR(255) NOT NULL,
+  favorite_car VARCHAR(255) NOT NULL,
+
+  PRIMARY KEY (id),
+  UNIQUE(username)
 );
 
 CREATE TABLE users (
-  id VARCHAR(36),
-  first_name VARCHAR(255),
-  last_name VARCHAR(255),
-  username VARCHAR(255),
-  points INT,
-  skill INT
+  id VARCHAR(36) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+
+  PRIMARY KEY (id),
+  UNIQUE(email)
+);
+
+CREATE TABLE customers (
+  id VARCHAR(36) NOT NULL,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  credits INT NOT NULL,
+
+  PRIMARY KEY (id),
+  UNIQUE(first_name, last_name)
+);
+
+CREATE TABLE products (
+  id VARCHAR(36) NOT NULL,
+  price VARCHAR(255) NOT NULL,
+  label VARCHAR(255) DEFAULT NULL,
+  coolness_factor INT DEFAULT NULL,
+
+  PRIMARY KEY (id),
+  UNIQUE(label),
+  UNIQUE(label, price)
 );
 
