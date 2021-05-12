@@ -16,7 +16,7 @@ CREATE TABLE moon_bar (
   str VARCHAR(255),
   `int` INT,
   bol BOOLEAN,
-  wen TIMESTAMP,
+  wen DATETIME,
   mark VARCHAR(255),
   `dec` REAL,
   arr TEXT,
