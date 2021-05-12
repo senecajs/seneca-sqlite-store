@@ -54,5 +54,12 @@ describe('sqlite', function () {
       script: lab
     })
   })
+
+  describe('upsert tests', () => {
+    Shared.upserttest({
+      seneca,
+      script: lab
+    })
+  })
 })
 
