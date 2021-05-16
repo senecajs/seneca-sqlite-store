@@ -8,6 +8,7 @@ CREATE TABLE foo (
   p1 VARCHAR(255),
   p2 VARCHAR(255),
   p3 VARCHAR(255),
+  int_arr VARCHAR(255),
   seneca VARCHAR(125)
 );
 
