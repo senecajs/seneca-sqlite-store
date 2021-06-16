@@ -55,13 +55,11 @@ describe('sqlite', function () {
     })
   })
 
-  /*
   describe('upsert tests', () => {
     Shared.upserttest({
       seneca,
       script: lab
     })
   })
-  */
 })
 
