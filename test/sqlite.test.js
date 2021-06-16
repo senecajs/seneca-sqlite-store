@@ -18,7 +18,7 @@ function makeSenecaForTest(opts = {}) {
   const { sqlite_store_opts = {} } = opts
 
   seneca.use(SenecaSQLiteStore, {
-    database: './test/db/senecatest.db',
+    database: './test/support/db/senecatest.db',
     ...sqlite_store_opts
   })
 

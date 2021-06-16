@@ -3,6 +3,8 @@
  * sqlite3 -init ./schema.sql ../test/db/senecatest.db
  */
 
+DROP TABLE IF EXISTS foo;
+
 CREATE TABLE foo (
   id VARCHAR(36),
   p1 VARCHAR(255),
@@ -16,6 +18,9 @@ CREATE TABLE foo (
   PRIMARY KEY (id),
   UNIQUE(x)
 );
+
+
+DROP TABLE IF EXISTS moon_bar;
 
 CREATE TABLE moon_bar (
   id VARCHAR(36),
@@ -32,6 +37,9 @@ CREATE TABLE moon_bar (
   PRIMARY KEY (id)
 );
 
+
+DROP TABLE IF EXISTS players;
+
 CREATE TABLE players (
   id VARCHAR(36) NOT NULL,
   username VARCHAR(255) NOT NULL,
@@ -41,6 +49,9 @@ CREATE TABLE players (
   PRIMARY KEY (id),
   UNIQUE(username)
 );
+
+
+DROP TABLE IF EXISTS racers;
 
 CREATE TABLE racers (
   id VARCHAR(36) NOT NULL,
@@ -52,6 +63,9 @@ CREATE TABLE racers (
   UNIQUE(username)
 );
 
+
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
   id VARCHAR(36) NOT NULL,
   username VARCHAR(255) NOT NULL,
@@ -60,6 +74,9 @@ CREATE TABLE users (
   PRIMARY KEY (id),
   UNIQUE(email)
 );
+
+
+DROP TABLE IF EXISTS customers;
 
 CREATE TABLE customers (
   id VARCHAR(36) NOT NULL,
@@ -70,6 +87,9 @@ CREATE TABLE customers (
   PRIMARY KEY (id),
   UNIQUE(first_name, last_name)
 );
+
+
+DROP TABLE IF EXISTS products;
 
 CREATE TABLE products (
   id VARCHAR(36) NOT NULL,
