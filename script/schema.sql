@@ -11,7 +11,10 @@ CREATE TABLE foo (
   int_arr VARCHAR(255),
   x INT,
   y INT,
-  seneca VARCHAR(125)
+  seneca VARCHAR(125),
+
+  PRIMARY KEY (id),
+  UNIQUE(x)
 );
 
 CREATE TABLE moon_bar (
@@ -24,7 +27,9 @@ CREATE TABLE moon_bar (
   `dec` REAL,
   arr TEXT,
   obj TEXT,
-  seneca VARCHAR(125)
+  seneca VARCHAR(125),
+
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE players (
