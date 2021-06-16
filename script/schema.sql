@@ -9,6 +9,8 @@ CREATE TABLE foo (
   p2 VARCHAR(255),
   p3 VARCHAR(255),
   int_arr VARCHAR(255),
+  x INT,
+  y INT,
   seneca VARCHAR(125)
 );
 
@@ -29,6 +31,7 @@ CREATE TABLE players (
   id VARCHAR(36) NOT NULL,
   username VARCHAR(255) NOT NULL,
   points INT DEFAULT NULL,
+  points_history TEXT DEFAULT NULL,
 
   PRIMARY KEY (id),
   UNIQUE(username)
