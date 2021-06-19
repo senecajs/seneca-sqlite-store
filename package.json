@@ -29,7 +29,7 @@
   "homepage": "https://github.com/senecajs-labs/seneca-sqlite-store",
   "bugs": "https://github.com/senecajs-labs/seneca-sqlite-store/issues",
   "dependencies": {
-    "eraro": "^0.4.1",
+    "eraro": "2.1.0",
     "lodash": "^4.3.0",
     "node-uuid": "*",
     "sqlite3": ">=2.1.5"

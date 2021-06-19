@@ -1,11 +1,11 @@
 
 'use strict'
 
-var Seneca = require('seneca')
-var lab = exports.lab = require('@hapi/lab').script()
-var { describe, before } = lab
-var Shared = require('seneca-store-test')
-var SenecaSQLiteStore = require('..')
+const Seneca = require('seneca')
+const lab = exports.lab = require('@hapi/lab').script()
+const { describe, before } = lab
+const Shared = require('seneca-store-test')
+const SenecaSQLiteStore = require('..')
 
 function makeSenecaForTest(opts = {}) {
   const seneca = Seneca({ log: 'test' })
