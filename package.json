@@ -4,8 +4,9 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "./node_modules/@hapi/lab/bin/lab test/*.test.js -r console -v -t 87",
-    "test-some": "./node_modules/@hapi/lab/bin/lab test/*.test.js -r console -v -g ",
+    "test": "./node_modules/@hapi/lab/bin/lab -P '\\.test' test -r console -v -t 87",
+    "test-some": "./node_modules/@hapi/lab/bin/lab -P '\\.test' test -r console -v -g ",
+    "migrate-for-test": "sqlite3 -init ./test/support/db/schema.sql ./test/support/db/senecatest.db '.exit'",
     "lint": "./node_modules/@hapi/lab/bin/lab -dL"
   },
   "repository": {
@@ -28,19 +29,20 @@
   "homepage": "https://github.com/senecajs-labs/seneca-sqlite-store",
   "bugs": "https://github.com/senecajs-labs/seneca-sqlite-store/issues",
   "dependencies": {
-    "eraro": "^0.4.1",
+    "eraro": "2.1.0",
     "lodash": "^4.3.0",
     "node-uuid": "*",
     "sqlite3": ">=2.1.5"
   },
   "devDependencies": {
-    "@hapi/lab": "24.2.0",
+    "@hapi/code": "8.0.3",
+    "@hapi/lab": "24.2.1",
     "eslint-config-seneca": "1.x.x",
     "eslint-plugin-hapi": "4.x.x",
     "eslint-plugin-standard": "1.x.x",
-    "seneca": "plugin",
-    "seneca-entity": "13.0.0",
-    "seneca-store-test": "^1.0.0"
+    "seneca": "3.23.3",
+    "seneca-entity": "14.0.0",
+    "seneca-store-test": "4.0.2"
   },
   "files": [
     "README.md",
