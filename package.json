@@ -4,10 +4,10 @@
   "description": "SQLite database layer for Seneca framework",
   "main": "lib/sqlite-store.js",
   "scripts": {
-    "test": "./node_modules/@hapi/lab/bin/lab --typescript -P '\\.test' test -r console -v -t 87",
-    "test-some": "./node_modules/@hapi/lab/bin/lab -P '\\.test' test -r console -v -g ",
+    "test": "lab --typescript -P '\\.test' test -r console -v -t 87",
+    "test-some": "lab -P '\\.test' test -r console -v -g ",
     "migrate-for-test": "sqlite3 -init ./test/support/db/schema.sql ./test/support/db/senecatest.db '.exit'",
-    "lint": "./node_modules/@hapi/lab/bin/lab -dL"
+    "lint": "lab -dL"
   },
   "repository": {
     "type": "git",
