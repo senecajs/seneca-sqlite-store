@@ -35,7 +35,7 @@
     "sqlite3": ">=2.1.5"
   },
   "devDependencies": {
-    "@hapi/code": "^8.0.7",
+    "@hapi/code": "^9.0.1",
     "@hapi/lab": "^25.0.1",
     "eslint-config-seneca": "1.x.x",
     "eslint-plugin-hapi": "4.x.x",
