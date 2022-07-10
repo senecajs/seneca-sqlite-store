@@ -645,9 +645,9 @@ const sqlite_store = function sqlite_store(this: any, options: SQLiteStoreOption
 }
 
 
-export sqlite_store
+Object.assign(sqlite_store, {errors: { 'cannot-init-db': 'Cannot connect to the database.' }})
 
-Object.assign(sqlite_store, {errors: { 'cannot-init-db': 'Cannot connect to the database.' }});
+export sqlite_store
 
 if( typeof(module) !== 'undefined'){
   module.exports = sqlite_store
