@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/senecajs-labs/seneca-sqlite-store.git"
+    "url": "git://github.com/senecajs/seneca-sqlite-store.git"
   },
   "keywords": [
     "seneca",
@@ -26,8 +26,8 @@
     "Matthew O'Connor (https://github.com/matthewoconnor-development)"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/senecajs-labs/seneca-sqlite-store",
-  "bugs": "https://github.com/senecajs-labs/seneca-sqlite-store/issues",
+  "homepage": "https://github.com/senecajs/seneca-sqlite-store",
+  "bugs": "https://github.com/senecajs/seneca-sqlite-store/issues",
   "dependencies": {
     "eraro": "2.1.0",
     "lodash": "^4.3.0",
