@@ -1,7 +1,7 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
-> A [Seneca.js](https://github.com/senecajs/) a seneca-auth plugin
+> A [Seneca.js](https://github.com/senecajs/) data storage plugin
 
-# seneca-sqlite-store
+# @seneca/sqlite-store
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
@@ -20,7 +20,7 @@ This project was sponsored by [nearForm](http://nearform.com).
 npm install seneca-sqlite-store
 ```
 
-## Using sqlite-store
+## Quick Example
 
 When using seneca-auth the local auth must be initialized using:
 
@@ -44,20 +44,42 @@ var si = seneca(senecaConfig);
 
 ```
 
-## Test
+## More Examples
+
+See [test/](test/) for usage examples.
+
+## Motivation
+
+A SQLite data store plugin for the Seneca framework. This project was sponsored by [nearForm](http://nearform.com).
+
+## Support
+
+If you are having difficulty, open an issue on the GitHub repo.
+
+## API
+
+See [README](README.md) and Seneca docs for message patterns.
+
+## Contributing
+
+The [Senecajs org](https://github.com/senecajs/) encourage open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
+
+### Running tests
+
 To run tests, simply use npm:
 
 ```sh
 npm run test
 ```
 
-## Contributing
-The [Senecajs org](https://github.com/senecajs/) encourage open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
+## Background
 
-## License
-Copyright Marius Ursache and other contributors 2016, Licensed under [MIT][].
+This plugin uses the [sqlite3](https://github.com/TryGhost/node-sqlite3) driver.
 
-
+[![npm version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![Dependency Status][david-badge]][david-url]
+[![Gitter chat][gitter-badge]][gitter-url]
 [npm-badge]: https://badge.fury.io/js/seneca-sqlite-store.svg
 [npm-url]: https://badge.fury.io/js/seneca-sqlite-store
 [david-badge]: https://david-dm.org/senecajs-labs/seneca-sqlite-store.svg
