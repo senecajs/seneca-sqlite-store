@@ -8,6 +8,9 @@
 [![Dependency Status][david-badge]][david-url]
 [![Gitter chat][gitter-badge]][gitter-url]
 
+| ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
+|---|---|
+
 Seneca-SQLite is a SQLite database driver for [Seneca](https://github.com/senecajs/) MVP toolkit
 This project was sponsored by [nearForm](http://nearform.com).
 
